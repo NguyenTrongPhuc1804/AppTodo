@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #98b5ff;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 370px !important;
+  }
+  .todo-list li {
+    width: 313px !important;
+  }
+}
+.wrapper {
+  max-width: 450px;
+  background-color: #2e4997;
+  height: 600px;
+  border-radius: 30px;
+  margin: 120px auto;
+  padding: 25px;
+}
+.wrapper header {
+  font-size: 30px;
+  color: aliceblue;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.wrapper .input-box {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  margin: 25px 0;
+}
+.input-box input {
+  width: 85%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  height: 100%;
+  outline: none;
+  padding-left: 15px;
+}
+.input-box button {
+  width: 60px;
+  height: 100%;
+  margin-left: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ea05f3;
+  color: aliceblue;
+  font-weight: 300;
+  font-size: 22px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.input-box button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper h4 {
+  margin-bottom: 20px;
+  color: rgba(255, 2555, 255, 0.5);
+  letter-spacing: 1px;
+}
+.todo-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.todo-list li {
+  color: #a8b2c4;
+  padding: 0 15px;
+  line-height: 60px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  cursor: default;
+  overflow: hidden;
+  list-style: none;
+  position: relative;
+  width: 340px;
+  height: 60px;
+  background: #031956;
+}
+.todo-list li i {
+  position: absolute;
+  right: -30px;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.todo-list li i.edit {
+  right: 30px;
+}
+
+.footer span {
+  font-size: 20px;
+  color: rgba(255, 2555, 255, 0.5);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+}
+.footer .clear {
+  border: none;
+  outline: none;
+  background: #ea05fe;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px 15px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.footer .clear.active {
+  opacity: 1;
+  pointer-events: auto;
+}
