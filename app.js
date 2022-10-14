@@ -35,15 +35,15 @@ valueInput.addEventListener("keypress", function (event) {
 //   } else if (e.target.matches(".edit")) {
 //   }
 // };
-clearAllBtn.onclick = (e) => {
-  let task = getTaskFromLocal();
-  if (task.length > 0) {
-    this.classList.add("active");
-    task = [];
-    localStorage.setItem("task", task);
-    showTask(task);
-  }
-};
+// clearAllBtn.onclick = (e) => {
+//   let task = getTaskFromLocal();
+//   if (task.length > 0) {
+//     this.classList.add("active");
+//     task = [];
+//     localStorage.setItem("task", task);
+//     showTask(task);
+//   }
+// };
 function handleShowtask() {
   const valueTask = valueInput.value;
   let task = getTaskFromLocal();
@@ -57,7 +57,6 @@ function handleShowtask() {
   valueInput.value = "";
 
   localStorage.setItem("task", JSON.stringify(task));
-  span.textContent = task.length;
 
   showTask(task);
 }
@@ -73,7 +72,6 @@ function deleteTask(id) {
   if (confirm("Do you want delete this task")) {
     task.splice(id, 1);
     localStorage.setItem("task", JSON.stringify(task));
-    span.textContent = task.length;
 
     showTask(task);
   }
